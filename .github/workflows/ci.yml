@@ -1,0 +1,19 @@
+name: Test Workflow
+
+# Ce workflow se déclenche à chaque push sur n'importe quelle branche
+on: [push]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Étape 1 : Récupérer le code du dépôt
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Étape 2 : Exécuter une commande qui affiche "Hello world!"
+      - name: Say Hello
+        run: echo "Hello world!"
+
+
